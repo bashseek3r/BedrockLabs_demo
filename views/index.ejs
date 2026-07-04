@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Diagnostic Laboratory in Abuja offering accurate medical laboratory testing and health screening.">
+    
+    <title><%= title %></title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <span class="logo-icon">🧬</span>
+                <span>Bedrock<span class="accent">Lab</span></span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="#hero">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#packages">Packages</a>
+                <a href="#faq">FAQ</a>
+                <a href="#appointment">Contact</a>
+                <a href="#appointment" class="btn-primary">
+                    Book Appointment
+                </a>
+            </nav>
+
+            <button id="menuToggle" class="menu-toggle">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <main id="app">
+
+        <section class="hero" id="hero">
+            <div class="hero-bg">
+                <span class="blob blob1"></span>
+                <span class="blob blob2"></span>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge">
+                        Trusted Medical Diagnostics in Abuja
+                    </span>
+
+                    <h1>
+                        Accurate Results.<br>
+                        Faster Diagnosis.<br>
+                        Better Health.
+                    </h1>
+
+                    <p>
+                        Bedrock Diagnostic Laboratory delivers reliable laboratory testing,
+                        preventive health screening and modern diagnostic services using
+                        advanced equipment and experienced professionals.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#appointment" class="btn-primary">
+                            Book Appointment
+                        </a>
+                        <a href="#services" class="btn-secondary">
+                            Explore Services
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h2>10+</h2>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h2>25k+</h2>
+                            <p>Patients Served</p>
+                        </div>
+                        <div class="stat">
+                            <h2>99%</h2>
+                            <p>Accurate Results</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image" style="position: relative;">
+                    <div class="image-card" style="position: relative; overflow: hidden; border-radius: 24px;">
+                        <img src="/images/guy.jpg" alt="Medical Laboratory Scientist at Bedrock Lab" style="width: 100%; display: block; border-radius: 24px;">
+                        
+                        <div class="floating-card" style="
+                            position: absolute; 
+                            bottom: 20px; 
+                            left: 20px; 
+                            background: rgba(255, 255, 255, 0.92); 
+                            backdrop-filter: blur(12px);
+                            -webkit-backdrop-filter: blur(12px);
+                            padding: 12px 18px; 
+                            border-radius: 16px; 
+                            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+                            max-width: 210px;
+                            z-index: 5;
+                            border: none;
+                        ">
+                            <h4 style="margin: 0; font-size: 0.88rem; font-weight: 700; color: #007bff; display: flex; align-items: center; gap: 6px;">
+                                <i class="fas fa-stopwatch" style="font-size: 0.92rem;"></i> Same Day Results
+                            </h4>
+                            <p style="margin: 4px 0 0 0; font-size: 0.78rem; color: #444; line-height: 1.4; font-weight: 500;">
+                                Available for selected laboratory tests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+        </section>
+
+        <section class="section about animate-on-scroll" id="about">
+            <div class="container about-grid">
+                
+                <div class="about-image">
+                    <img src="/images/inside bedrock lab.jpg" alt="Inside Bedrock Diagnostic Laboratory">
+                    
+                    <div class="experience-card">
+                        <h2>10+</h2>
+                        <p>Years of Medical<br>Excellence</p>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <span class="section-tag">About Our Laboratory</span>
+                    <h2>Pioneering Advanced Medical Diagnostics in Abuja</h2>
+                    <p>
+                        Bedrock Diagnostic Laboratory is a premier medical testing facility committed to delivering clinical excellence. We bridge the gap between clinical symptoms and precise treatments by offering high-fidelity testing solutions.
+                    </p>
+                    <p>
+                        Equipped with cutting-edge automated analyzers and managed by a dedicated team of highly qualified medical laboratory scientists and pathologists, we guarantee swift turnaround times without ever compromising on clinical accuracy.
+                    </p>
+
+                    <div class="mission-grid">
+                        <div class="mission-card">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <h3>Our Mission</h3>
+                            <p>To provide accessible, rapid, and flawless diagnostic insights that empower better healthcare choices.</p>
+                        </div>
+                        
+                        <div class="mission-card">
+                            <i class="fa-solid fa-eye"></i>
+                            <h3>Our Vision</h3>
+                            <p>To be the most trusted and preferred diagnostic diagnostic partnership hub across Nigeria.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="trust section animate-on-scroll" id="trust">
+            <div class="container">
+                
+                <div class="section-header">
+                    <span class="section-tag">Why Patients Trust Bedrock</span>
+                    <h2>Healthcare Built on Accuracy & Integrity</h2>
+                </div>
+
+                <div class="trust-grid">
+                    
+                    <div class="trust-card">
+                        <i class="fas fa-microscope"></i>
+                        <h3>Modern Equipment</h3>
+                        <p>Advanced diagnostic instruments delivering dependable results.</p>
+                    </div>
+
+                    <div class="trust-card">
+                        <i class="fas fa-user-doctor"></i>
+                        <h3>Expert Scientists</h3>
+                        <p>Qualified laboratory professionals committed to excellence.</p>
+                    </div>
+
+                    <div class="trust-card">
+                        <i class="fas fa-stopwatch"></i>
+                        <h3>Fast Turnaround</h3>
+                        <p>Prompt reporting without compromising quality.</p>
+                    </div>
+
+                    <div class="trust-card">
+                        <i class="fas fa-shield-heart"></i>
+                        <h3>Quality Assurance</h3>
+                        <p>Strict internal quality control procedures for every sample.</p>
+                    </div>
+
+                    <div class="trust-card">
+                        <i class="fas fa-lock"></i>
+                        <h3>Confidential Results</h3>
+                        <p>Your medical information remains secure and private.</p>
+                    </div>
+
+                    <div class="trust-card">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Patient First</h3>
+                        <p>Friendly support from appointment to result collection.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="stats section animate-on-scroll">
+            <div class="container">
+                <div class="stats-grid">
+                    
+                    <div class="stat-box">
+                        <h2 class="counter" data-target="25000">0</h2>
+                        <span>+</span>
+                        <p>Patients Served</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h2 class="counter" data-target="180">0</h2>
+                        <span>+</span>
+                        <p>Laboratory Tests</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h2 class="counter" data-target="99">0</h2>
+                        <span>%</span>
+                        <p>Accuracy Rate</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h2 class="counter" data-target="10">0</h2>
+                        <span>+</span>
+                        <p>Years Experience</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline section animate-on-scroll">
+            <div class="container">
+                
+                <div class="section-header">
+                    <span class="section-tag">Patient Journey</span>
+                    <h2>Simple. Fast. Reliable.</h2>
+                    <p>We've designed every step to be smooth, professional and stress-free.</p>
+                </div>
+
+                <div class="timeline-wrapper">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-circle">1</div>
+                        <h3>Book Appointment</h3>
+                        <p>Call, WhatsApp or visit the laboratory.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-circle">2</div>
+                        <h3>Sample Collection</h3>
+                        <p>Our professionals collect your samples carefully.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-circle">3</div>
+                        <h3>Laboratory Analysis</h3>
+                        <p>Advanced equipment processes every sample.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-circle">4</div>
+                        <h3>Quality Review</h3>
+                        <p>Every result undergoes strict verification.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-circle">5</div>
+                        <h3>Receive Results</h3>
+                        <p>Collect securely or receive digitally.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="accreditation animate-on-scroll">
+            <div class="container">
+                <h3>Committed to International Standards</h3>
+                
+                <div class="partner-grid">
+                    <div class="partner-card">ISO Ready</div>
+                    <div class="partner-card">Quality Control</div>
+                    <div class="partner-card">Modern Equipment</div>
+                    <div class="partner-card">Confidentiality</div>
+                    <div class="partner-card">Professional Ethics</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="packages section animate-on-scroll" id="packages">
+            <div class="container">
+                
+                <div class="section-header">
+                    <span class="section-tag">Health Packages</span>
+                    <h2>Preventive Health Starts Here</h2>
+                    <p>Choose a screening package tailored to your lifestyle, health goals or organisational needs.</p>
+                </div>
+
+                <div class="packages-grid">
+
+                    <article class="package-card">
+                        <div class="package-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Basic Wellness</h3>
+                        <p class="package-subtitle">Ideal for routine annual health checks.</p>
+                        <ul>
+                            <li>✔ Blood Sugar</li>
+                            <li>✔ Full Blood Count</li>
+                            <li>✔ Urinalysis</li>
+                            <li>✔ Blood Pressure Review</li>
+                            <li>✔ Same Day Results*</li>
+                        </ul>
+                        <a href="#appointment" class="package-btn">Book Package</a>
+                    </article>
+
+                    <article class="package-card featured-package">
+                        <span class="popular">Most Popular</span>
+                        <div class="package-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Executive Check</h3>
+                        <p class="package-subtitle">Comprehensive preventive screening.</p>
+                        <ul>
+                            <li>✔ Liver Function</li>
+                            <li>✔ Kidney Function</li>
+                            <li>✔ Lipid Profile</li>
+                            <li>✔ Diabetes Screening</li>
+                            <li>✔ ECG Referral Support</li>
+                            <li>✔ Doctor Interpretation</li>
+                        </ul>
+                        <a href="#appointment" class="package-btn">Book Package</a>
+                    </article>
+
+                    <article class="package-card">
+                        <div class="package-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Corporate Screening</h3>
+                        <p class="package-subtitle">Employee wellness made simple.</p>
+                        <ul>
+                            <li>✔ Flexible Packages</li>
+                            <li>✔ On-site Collection</li>
+                            <li>✔ Digital Reports</li>
+                            <li>✔ Group Discounts</li>
+                            <li>✔ Custom Plans</li>
+                        </ul>
+                        <a href="#appointment" class="package-btn">Contact Us</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials section animate-on-scroll" id="testimonials">
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="section-tag">Patient Testimonials</span>
+                    <h2>Trusted by Patients & Healthcare Professionals</h2>
+                    <p>Our greatest achievement is the confidence our patients place in us.</p>
+                </div>
+
+                <div class="testimonial-slider">
+
+                    <article class="testimonial-card active">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "The staff were professional and my results were ready earlier than expected. I highly recommend Bedrock Diagnostic Laboratory."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="/images/avatar1.jpg" alt="Patient">
+                            <div>
+                                <h4>Grace A.</h4>
+                                <span>Patient</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Excellent customer service and a clean environment. The entire process was smooth from sample collection to receiving my results."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="/images/avatar2.jpg" alt="Patient">
+                            <div>
+                                <h4>Dr. Ibrahim M.</h4>
+                                <span>Medical Practitioner</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Their home sample collection service saved me so much time. Professional, courteous and reliable."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="/images/avatar3.jpg" alt="Patient">
+                            <div>
+                                <h4>Esther O.</h4>
+                                <span>Client</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="faq section animate-on-scroll" id="faq">
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="section-tag">Frequently Asked Questions</span>
+                    <h2>Everything You Need to Know</h2>
+                    <p>We've answered some of the most common questions from our patients.</p>
+                </div>
+
+                <div class="faq-wrapper">
+
+                    <div class="faq-item active">
+                        <button class="faq-question">
+                            <span>How long does it take to receive my results?</span>
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Many routine tests are available the same day, while more
+                                specialised investigations may take longer. We'll let you
+                                know the expected turnaround time before processing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you offer home sample collection?</span>
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Yes. Our trained professionals can collect samples safely
+                                from your home or workplace by prior appointment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I book an appointment online?</span>
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Absolutely. You can submit the appointment form, call us,
+                                or reach us directly via WhatsApp.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Are my laboratory results confidential?</span>
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Yes. Every patient's information is handled with strict
+                                confidentiality and secure reporting procedures.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do I need a doctor's referral?</span>
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Some tests can be requested directly, while others may
+                                require a physician's referral depending on medical
+                                guidelines.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact section animate-on-scroll" id="appointment">
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="section-tag">Book Appointment</span>
+                    <h2>Let's Help You Take Charge of Your Health</h2>
+                    <p>Book an appointment, request home sample collection or contact our laboratory.</p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <div class="contact-info">
+                        
+                        <div class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+234 813 789 7250</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h3>WhatsApp</h3>
+                                <p>+234 813 789 7250</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@bedrocklabs.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>Abuja, Nigeria</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Working Hours</h3>
+                                <p>Mon–Sat 7:30 AM – 6:00 PM</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="appointment-form">
+                        <form id="appointmentForm" action="/book-appointment" method="POST">
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="Full Name" required>
+                                <input type="tel" name="phone" placeholder="Phone Number" required>
+                            </div>
+
+                            <div class="form-row">
+                                <input type="email" name="email" placeholder="Email Address">
+                                <select name="service" required>
+                                    <option value="" disabled selected>Select Service</option>
+                                    <option value="Clinical Chemistry">Clinical Chemistry</option>
+                                    <option value="Haematology">Haematology</option>
+                                    <option value="Executive Check">Executive Check</option>
+                                    <option value="Home Sample Collection">Home Sample Collection</option>
+                                </select>
+                            </div>
+
+                            <input type="date" name="date" required>
+                            
+                            <textarea name="message" rows="6" placeholder="Additional Information"></textarea>
+                            
+                            <button class="btn-primary" type="submit">
+                                Book Appointment
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta section animate-on-scroll">
+            <div class="container">
+                <div class="cta-box">
+                    <div>
+                        <h2>Take the First Step Towards Better Health</h2>
+                        <p>
+                            Book your laboratory appointment today and receive accurate,
+                            reliable and timely diagnostic services from experienced professionals.
+                        </p>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="#appointment" class="btn-primary">
+                            Book Appointment
+                        </a>
+                        <a href="https://wa.me/2348137897250" class="btn-secondary" target="_blank">
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>Bedrock Diagnostic Laboratory</h3>
+                <p>
+                    Providing dependable laboratory diagnostics with accuracy,
+                    professionalism and compassion.
+                </p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#appointment">Appointment</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>📞 +234 813 789 7250</p>
+                <p>📍 Abuja, Nigeria</p>
+                <p>✉ info@bedrocklabs.com</p>
+            </div>
+
+            <div>
+                <h4>Working Hours</h4>
+                <p>Mon–Fri: 7:30 AM – 6 PM</p>
+                <p>Saturday: 8 AM – 3 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © <%= year %> Bedrock Diagnostic Laboratory. All Rights Reserved.
+        </div>
+    </footer>
+
+    <a class="whatsapp" href="https://wa.me/2348137897250" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
+
