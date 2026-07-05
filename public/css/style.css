@@ -1,3 +1,4 @@
+
 /* ==========================================================================
    1. GLOBAL VARIABLES & RESETS
    ========================================================================== */
@@ -28,7 +29,13 @@ body {
     overflow-x: hidden;
 }
 
-/* UPDATED: Global reset ensures images can never break out of parent container width */
+/* UPGRADE: Custom Selection Color Alignment */
+::selection {
+    background: var(--primary);
+    color: white;
+}
+
+/* Global reset ensures images can never break out of parent container width */
 img {
     max-width: 100%;
     height: auto;
@@ -129,6 +136,7 @@ img {
 /* ==========================================================================
    4. BUTTONS & UI COMPONENTS
    ========================================================================== */
+/* UPGRADE: Shimmer Effect Properties added to Button Primary */
 .btn-primary {
     background: var(--primary);
     padding: 12px 22px;
@@ -139,6 +147,24 @@ img {
     display: inline-block;
     border: none;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    left: -120%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .25);
+    transform: skewX(-30deg);
+    transition: .6s;
+}
+
+.btn-primary:hover::before {
+    left: 130%;
 }
 
 .btn-secondary {
@@ -180,7 +206,57 @@ img {
 }
 
 /* ==========================================================================
-   5. HERO SECTION
+   5. INTERACTIVE STRUCTURAL CARDS
+   ========================================================================== */
+/* UPGRADE: Soft Unified Layout Card Interactions Group */
+.service-card,
+.package-card,
+.trust-card,
+.mission-card,
+.contact-card {
+    transition: transform .35s, box-shadow .35s, border-color .35s;
+}
+
+/* ==========================================================================
+   6. FLOATING INTERACTIVE UTILITIES
+   ========================================================================== */
+/* UPGRADE: Scroll Progress Bar Indicator Layout */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    z-index: 9999;
+    transition: width .08s linear;
+}
+
+/* UPGRADE: Floating Back to Top Control Container Layout */
+#backToTop {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+    transition: .3s;
+    z-index: 999;
+}
+
+#backToTop:hover {
+    transform: translateY(-6px);
+}
+
+/* ==========================================================================
+   7. HERO SECTION
    ========================================================================== */
 .hero {
     min-height: 100vh;
@@ -263,7 +339,6 @@ img {
     box-shadow: 0 25px 60px rgba(0,0,0,.15);
 }
 
-/* UPDATED: Height lock combined with cover crop stops oversized graphics from fracturing layout */
 .image-card img {
     width: 100%;
     height: 480px;
@@ -283,7 +358,6 @@ img {
     z-index: 10;
 }
 
-/* Background Decorative Blobs */
 .blob {
     position: absolute;
     border-radius: 50%;
@@ -307,7 +381,6 @@ img {
     left: -70px;
 }
 
-/* Scroll Animation */
 .scroll-indicator {
     position: absolute;
     bottom: 25px;
@@ -338,7 +411,7 @@ img {
 }
 
 /* ==========================================================================
-   6. SERVICES SECTION
+   8. SERVICES SECTION
    ========================================================================== */
 .services {
     background: #fff;
@@ -355,7 +428,6 @@ img {
     padding: 40px;
     border-radius: 24px;
     box-shadow: 0 15px 35px rgba(0,0,0,.06);
-    transition: .35s;
     position: relative;
     overflow: hidden;
     border: 1px solid #eef3f8;
@@ -437,7 +509,7 @@ img {
 }
 
 /* ==========================================================================
-   7. ABOUT SECTION
+   9. ABOUT SECTION
    ========================================================================== */
 .about {
     background: #f8fbff;
@@ -456,7 +528,6 @@ img {
     width: 100%;
 }
 
-/* UPDATED: Locks height parameters for about section to keep grid rows aligned */
 .about-image img {
     width: 100%;
     height: 450px;
@@ -507,7 +578,6 @@ img {
     padding: 30px;
     border-radius: 22px;
     box-shadow: 0 15px 40px rgba(0,0,0,.06);
-    transition: .35s;
 }
 
 .mission-card:hover {
@@ -525,7 +595,7 @@ img {
 }
 
 /* ==========================================================================
-   8. TRUST / WHY CHOOSE US SECTION
+   10. TRUST / WHY CHOOSE US SECTION
    ========================================================================== */
 .trust-grid {
     display: grid;
@@ -538,7 +608,6 @@ img {
     border-radius: 24px;
     background: white;
     box-shadow: 0 18px 45px rgba(0,0,0,.06);
-    transition: .35s;
     border-top: 5px solid transparent;
 }
 
@@ -563,7 +632,7 @@ img {
 }
 
 /* ==========================================================================
-   9. COUNTER STATS SECTION
+   11. COUNTER STATS SECTION
    ========================================================================== */
 .stats {
     background: linear-gradient(135deg, #0b6efd, #1266d8);
@@ -598,7 +667,7 @@ img {
 }
 
 /* ==========================================================================
-   10. PATIENT JOURNEY TIMELINE
+   12. PATIENT JOURNEY TIMELINE
    ========================================================================== */
 .timeline {
     background: #fff;
@@ -655,7 +724,7 @@ img {
 }
 
 /* ==========================================================================
-   11. ACCREDITATION STANDARDS
+   13. ACCREDITATION STANDARDS
    ========================================================================== */
 .accreditation {
     padding: 80px 0;
@@ -676,7 +745,6 @@ img {
     background: white;
     font-weight: 700;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
-    transition: .35s;
 }
 
 .partner-card:hover {
@@ -684,7 +752,7 @@ img {
 }
 
 /* ==========================================================================
-   12. HEALTH PACKAGES
+   14. HEALTH PACKAGES
    ========================================================================== */
 .packages {
     background: #ffffff;
@@ -703,7 +771,6 @@ img {
     padding: 45px;
     border-radius: 28px;
     box-shadow: 0 18px 50px rgba(0,0,0,.06);
-    transition: .4s;
     overflow: hidden;
     border: 1px solid #eef2f7;
 }
@@ -816,7 +883,7 @@ img {
 }
 
 /* ==========================================================================
-   13. PATIENT TESTIMONIALS
+   15. PATIENT TESTIMONIALS
    ========================================================================== */
 .testimonials {
     background: #f8fbff;
@@ -905,7 +972,7 @@ img {
 }
 
 /* ==========================================================================
-   14. FREQUENTLY ASKED QUESTIONS (FAQ)
+   16. FREQUENTLY ASKED QUESTIONS (FAQ)
    ========================================================================== */
 .faq {
     background: #ffffff;
@@ -966,7 +1033,7 @@ img {
 }
 
 /* ==========================================================================
-   15. CONTACT & APPOINTMENTS
+   17. CONTACT & APPOINTMENTS
    ========================================================================== */
 .contact {
     background: #f8fbff;
@@ -983,17 +1050,6 @@ img {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.contact-card {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    padding: 25px;
-    background: white;
-    border-radius: 22px;
-    box-shadow: 0 12px 35px rgba(0,0,0,.06);
-    transition: .35s;
 }
 
 .contact-card:hover {
@@ -1057,7 +1113,93 @@ img {
 }
 
 /* ==========================================================================
-   16. SCROLL ANIMATION UTILITIES & RESPONSIVE BREAKPOINTS
+   18. CALL TO ACTION (CTA)
+   ========================================================================== */
+.cta {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, #0b6efd, #2563eb);
+    border-radius: 32px;
+    padding: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    color: white;
+    box-shadow: 0 30px 80px rgba(37,99,235,.28);
+}
+
+.cta-box h2 {
+    font-size: 2.6rem;
+    margin-bottom: 18px;
+}
+
+.cta-box p {
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   19. DETAILED FOOTER
+   ========================================================================== */
+.footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 80px 0 25px;
+    margin-top: 100px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer h3,
+.footer h4 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    margin-bottom: 14px;
+}
+
+.footer a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer a:hover {
+    color: white;
+    padding-left: 6px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    color: #94a3b8;
+}
+
+/* ==========================================================================
+   20. SCROLL ANIMATION UTILITIES & RESPONSIVE BREAKPOINTS
    ========================================================================== */
 .hidden {
     opacity: 0;
@@ -1117,7 +1259,6 @@ img {
         margin-top: 40px;
     }
 
-    /* UPDATED: Height scales down perfectly for smaller viewports without overflowing elements */
     .image-card img {
         height: 380px;
     }
@@ -1127,7 +1268,6 @@ img {
         grid-template-columns: 1fr;
     }
 
-    /* UPDATED: Height calibration for small screens */
     .about-image img {
         height: 350px;
     }
@@ -1184,90 +1324,3 @@ img {
         text-align: center;
     }
 }
-
-/* ==========================================================================
-   17. CALL TO ACTION (CTA)
-   ========================================================================== */
-.cta {
-    padding: 100px 0;
-    background: #ffffff;
-}
-
-.cta-box {
-    background: linear-gradient(135deg, #0b6efd, #2563eb);
-    border-radius: 32px;
-    padding: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    color: white;
-    box-shadow: 0 30px 80px rgba(37,99,235,.28);
-}
-
-.cta-box h2 {
-    font-size: 2.6rem;
-    margin-bottom: 18px;
-}
-
-.cta-box p {
-    line-height: 1.8;
-    max-width: 600px;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-/* ==========================================================================
-   18. DETAILED FOOTER
-   ========================================================================== */
-.footer {
-    background: #0f172a;
-    color: #cbd5e1;
-    padding: 80px 0 25px;
-    margin-top: 100px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-.footer h3,
-.footer h4 {
-    color: white;
-    margin-bottom: 20px;
-}
-
-.footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer li {
-    margin-bottom: 14px;
-}
-
-.footer a {
-    color: #cbd5e1;
-    text-decoration: none;
-    transition: .3s;
-}
-
-.footer a:hover {
-    color: white;
-    padding-left: 6px;
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255,255,255,.08);
-    color: #94a3b8;
-}
-
